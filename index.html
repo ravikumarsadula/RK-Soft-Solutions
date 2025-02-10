@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">RK Soft Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero-section" style="background-image: url('assets/images/image4.avif'); color: rgb(14, 12, 12);">
+        <div class="container text-center text-white py-5">
+            <h1>Welcome to the RK Soft Solutions</h1>
+            <p>Enhance your skills with our online courses and become a part of a global learning community.</p>
+        </div>
+    </section>
+
+    <!-- Welcome Message for Institutions and New Users -->
+    <section class="welcome-section" style="background-image: url('assets/images/image11.webp'); background-size: cover; background-position: center; color: rgb(14, 12, 12); padding: 50px 0;">
+        <div class="container text-center">
+            <p>We are here to help you provide quality education to students across the globe. Join us in our mission to make learning accessible and affordable for everyone. As an institution, you can create your own courses, manage students, and monitor their progress in real-time.</p>
+            <p>If you're new to our platform, we encourage you to <strong>register</strong> and become a part of our educational community.</p>
+            <button class="btn btn-primary btn-lg mt-3" id="registerBtn">Register Now</button>
+        </div>
+    </section>
+
+    <!-- Registration Form (Initially Hidden) -->
+    <div class="container mt-5" id="registerForm" style="display: none;">
+        <h3 class="text-center">Create Your Account</h3>
+        <form id="registrationForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+            You have successfully registered!
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center bg-light py-3">
+        <p>&copy; 2025 RK Soft Solutions. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Handling -->
+    <script>
+        // Show the registration form when the Register button is clicked
+        document.getElementById("registerBtn").addEventListener("click", function() {
+            document.getElementById("registerForm").style.display = "block";
+            this.style.display = "none";  // Hide the Register button
+        });
+
+        // Handle form submission
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent default form submission
+
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Show success message
+            document.getElementById("successMessage").style.display = "block";
+
+            // Optionally: Store user data or send to a server (for now, just clear the form)
+            document.getElementById("registrationForm").reset();
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

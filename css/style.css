@@ -1,0 +1,53 @@
+/* General Styles */
+
+
+header {
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    background-color: #cfdede;
+    background-image: url('assets/images/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    color: #333; 
+    font-family: Arial, sans-serif;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+}
+
+/* Section with Background */
+section.bg-dark {
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+section.bg-dark h2 {
+    font-size: 2.5rem;
+}
+
+footer {
+    background-color: #b6bbc1;
+}
+
+footer p {
+    margin: 0;
+}

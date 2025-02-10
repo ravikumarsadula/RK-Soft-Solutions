@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">RK Soft Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Courses Section -->
+   <section class="courses-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Available Courses</h2>
+
+        <div class="row">
+            <!-- Course 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/course1.jpg" class="card-img-top" alt="Course 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 1: Introduction to Programming</h5>
+                        <p class="card-text">Learn the basics of programming and get started with Python.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="setCourseDetails('Course 1', 'Introduction to Programming')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/course2.jpg" class="card-img-top" alt="Course 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 2: Web Development</h5>
+                        <p class="card-text">Build dynamic websites using HTML, CSS, and JavaScript.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="setCourseDetails('Course 2', 'Web Development')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/course3.jpg" class="card-img-top" alt="Course 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 3: Data Science Basics</h5>
+                        <p class="card-text">Understand the foundations of Data Science and Machine Learning.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="setCourseDetails('Course 3', 'Data Science Basics')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/course4.jpg" class="card-img-top" alt="Course 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 4: Mobile App Development</h5>
+                        <p class="card-text">Learn to create mobile apps using Flutter and Dart.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="setCourseDetails('Course 4', 'Mobile App Development')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/course5.jpg" class="card-img-top" alt="Course 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 5: Cloud Computing Essentials</h5>
+                        <p class="card-text">Learn the basics of cloud computing and how to use platforms like AWS and Azure.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="setCourseDetails('Course 5', 'Cloud Computing Essentials')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/course6.jpg" class="card-img-top" alt="Course 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 6: Digital Marketing</h5>
+                        <p class="card-text">Get a grasp on digital marketing strategies such as SEO, SEM, and social media marketing.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="setCourseDetails('Course 6', 'Digital Marketing')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/course7.jpg" class="card-img-top" alt="Course 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 7: Graphic Design Fundamentals</h5>
+                        <p class="card-text">Learn the basics of graphic design using tools like Adobe Photoshop and Illustrator.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="setCourseDetails('Course 7', 'Graphic Design Fundamentals')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 8 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/course8.jpg" class="card-img-top" alt="Course 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 8: Artificial Intelligence Basics</h5>
+                        <p class="card-text">Understand the fundamentals of AI and how it’s shaping industries.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="setCourseDetails('Course 8', 'Artificial Intelligence Basics')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 9 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/course9.jpg" class="card-img-top" alt="Course 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 9: Cybersecurity Fundamentals</h5>
+                        <p class="card-text">Learn the basics of cybersecurity and how to protect your data and networks.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="setCourseDetails('Course 9', 'Cybersecurity Fundamentals')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 10 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/course10.jpg" class="card-img-top" alt="Course 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 10: Data Analytics with Python</h5>
+                        <p class="card-text">Learn data analysis and visualization techniques using Python libraries like Pandas and Matplotlib.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" onclick="setCourseDetails('Course 10', 'Data Analytics with Python')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Enrollment Modal -->
+<div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="enrollModalLabel">Enroll in Course</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="courseTitle">Course: <strong></strong></p>
+                <p>Select your student category:</p>
+                <select id="studentCategory" class="form-select">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="enrollStudent()">Confirm Enrollment</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Set course details in modal
+    function setCourseDetails(courseName, courseDescription) {
+        document.getElementById('courseTitle').innerHTML = `Course: <strong>${courseName} - ${courseDescription}</strong>`;
+    }
+
+    // Enroll student after selecting category
+    function enrollStudent() {
+        const category = document.getElementById('studentCategory').value;
+        alert(`You have been successfully enrolled in the course as a(n) ${category} student.`);
+        // Close the modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('enrollModal'));
+        modal.hide();
+    }
+</script>
+</body>
+</html>
